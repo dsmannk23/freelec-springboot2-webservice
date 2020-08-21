@@ -14,6 +14,10 @@ cache:
 
 script: "./gradlew clean build"
 
+# gradlew 실행시 권한 오류 발생으로 인한 추가
+before_install:
+  - chmod +x gradlew
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
